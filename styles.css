@@ -26,14 +26,14 @@ nav .container {
 
 nav .header_left a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     font-size: 20px;
 }
 
 nav .header_right a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-weight: bold;
     margin-left: 20px;
 }
@@ -54,17 +54,38 @@ nav .header_right a:hover {
 
 /* 标题样式 */
 h1, h2 {
-    color: #007BFF;
-    border-bottom: 2px solid #007BFF;
+    color: #000000;
+    border-bottom: 2px solid #e6f7d4;
     padding-bottom: 5px;
     margin-top: 20px;
 }
 
-/* 图片样式 */
-.img img {
-    max-width: 100%;
+/* 照片和简介布局 */
+.heading {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.heading .img {
+    flex: 0 0 18%;
+    margin-right: 20px;
+}
+
+.heading .img img {
+    width: 100%;
     height: auto;
     border-radius: 8px;
+    display: block;
+}
+
+.heading .text {
+    flex: 1;
+}
+
+.heading .subhead {
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* 出版物样式 */
@@ -76,6 +97,12 @@ h1, h2 {
 .publication .img {
     flex: 0 0 150px;
     margin-right: 20px;
+}
+
+.publication .img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .publication .text {
@@ -119,6 +146,15 @@ ul li {
 @media (max-width: 768px) {
     nav .header_right {
         display: none;
+    }
+
+    .heading {
+        flex-direction: column;
+    }
+
+    .heading .img {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
     .publication {
