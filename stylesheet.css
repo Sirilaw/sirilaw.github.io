@@ -2,8 +2,8 @@
   --h2-font-size: 24px;
   --h2-font-weight: normal;
   --paper-font-size: 19px;
-  --main-font-size: 18px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --main-font-size: 17px;
+  --font: Palatino, sans-serif;
 }
 
 a {
@@ -18,16 +18,17 @@ a:hover {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
 }
 
 ul {
-  padding-left: 0;
-  list-style: none;
-  list-style-position: inside; /* 可选 */
+  padding-left: 12px; /* 控制圆点的缩进 */
+  margin-left: 0;
+  list-style: none; /* 去掉默认的列表样式 */
+  list-style-position:inside; /* 可选 */
 }
 
 li::before {
@@ -39,27 +40,27 @@ td,
 th,
 tr,
 a {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: var(--main-font-size);
 }
 
 p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: var(--main-font-size);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 h2 {
   margin: 0;
   font-weight: 500;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: var(--h2-font-size);
   border-bottom: #D3D3D3 1.5px solid;
   padding-bottom: 5px;
 }
 
 papertitle {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: var(--paper-font-size);
   font-weight: 700;
 }
@@ -67,7 +68,7 @@ papertitle {
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font);
   font-size: 32px;
 }
 
