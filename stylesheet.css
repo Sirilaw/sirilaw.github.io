@@ -1,5 +1,13 @@
+:root {
+  --h2-font-size: 24px;
+  --h2-font-weight: normal;
+  --paper-font-size: 19px;
+  --main-font-size: 18px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 a {
-  color: #1f63a7;
+  color: #0984e3;
   text-decoration: none;
 }
 
@@ -10,43 +18,56 @@ a:hover {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  list-style-position: inside; /* 可选 */
+}
+
+li::before {
+  content: "•";
+  padding-right: 6px; /* 控制圆点与文本之间的间距 */
 }
 
 td,
 th,
 tr,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--main-font-size);
 }
 
 p {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--main-font-size);
   line-height: 1.5;
 }
 
 h2 {
   margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--h2-font-size);
+  border-bottom: #D3D3D3 1.5px solid;
+  padding-bottom: 5px;
 }
 
 papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--paper-font-size);
   font-weight: 700;
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 32px;
 }
 
