@@ -1,8 +1,9 @@
 :root {
-  --h2-font-size: 24px;
+  --h1-font-size: 2em;
+  --h2-font-size: 1.4em;
   --h2-font-weight: normal;
-  --paper-font-size: 19px;
-  --main-font-size: 17px;
+  --paper-font-size: 18px;
+  --main-font-size: 16px;
   --font: Palatino, sans-serif;
 }
 
@@ -13,13 +14,14 @@ a {
 
 a:focus,
 a:hover {
-  color: #0ccfcf;
+  color: #6bd577;
   text-decoration: none;
 }
 
 body {
   font-family: var(--font);
   font-size: 16px;
+  color: #555;
   font-weight: normal;
   line-height: 1.5;
 }
@@ -50,13 +52,20 @@ p {
   line-height: 1.6;
 }
 
+h1 {
+  margin: 0;
+  font-weight: 500;
+  color: #ff7882;
+  font-family: var(--font);
+  font-size: var(--h1-font-size);
+}
+
 h2 {
   margin: 0;
   font-weight: 500;
+  color: #ff7882;
   font-family: var(--font);
   font-size: var(--h2-font-size);
-  border-bottom: #D3D3D3 1.5px solid;
-  padding-bottom: 5px;
 }
 
 papertitle {
@@ -65,33 +74,25 @@ papertitle {
   font-weight: 700;
 }
 
+.main {
+    width: 900px;
+    /*border-style: solid;*/
+    /*border-color: #eee;*/
+    /*border-radius: 10px;*/
+    margin: 10px auto;
+    padding: 40px;
+    /* Removing these to create a uniform look */
+    /*background-color: #ffffff;*/
+    /*border-radius: 8px;*/
+    /*box-shadow: 0 2px 5px rgba(0,0,0,0.05);*/
+}
+
 .name {
-  padding-top: 20px;
   margin: 0;
   font-family: var(--font);
-  font-size: 32px;
+  font-size: 30px;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
-}
-
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
 
 span.highlight {
   background-color: #ffffd0;
@@ -102,6 +103,10 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+.icon {
+  height: 25px;
 }
 
 ul.spaced-list li {
