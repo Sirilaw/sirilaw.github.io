@@ -4,64 +4,57 @@
   --h2-font-weight: normal;
   --paper-font-size: 18px;
   --main-font-size: 16px;
-  --font: Palatino, sans-serif;
+  --font: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  /* Fallback system fonts are already defined above */
 }
 
 a {
   color: #0984e3;
-  text-decoration: none;
 }
-
 a:focus,
 a:hover {
   color: #6bd577;
-  text-decoration: none;
 }
 
 body {
   font-family: var(--font);
-  font-size: 16px;
+  font-size: var(--main-font-size);
   color: #555;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 ul {
   padding-left: 12px; /* 控制圆点的缩进 */
-  margin-left: 0;
   list-style: none; /* 去掉默认的列表样式 */
   list-style-position:inside; /* 可选 */
 }
 
 li::before {
-  content: "•";
+  content: "•"; /* 使用圆点符号 */
   padding-right: 6px; /* 控制圆点与文本之间的间距 */
 }
 
-td,
-th,
-tr,
-a {
-  font-family: var(--font);
-  font-size: var(--main-font-size);
+img.me {
+    margin-right: 25px;
+    border:2px solid #fff;
+    border-radius: 5px;
 }
 
 p {
-  font-family: var(--font);
-  font-size: var(--main-font-size);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 h1 {
-  margin: 0;
   font-weight: 500;
   color: #ff7882;
   font-family: var(--font);
   font-size: var(--h1-font-size);
+  margin-bottom: 8px;
 }
 
 h2 {
-  margin: 0;
+  margin-bottom: 8px;
   font-weight: 500;
   color: #ff7882;
   font-family: var(--font);
@@ -71,42 +64,20 @@ h2 {
 papertitle {
   font-family: var(--font);
   font-size: var(--paper-font-size);
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .main {
     width: 900px;
-    /*border-style: solid;*/
-    /*border-color: #eee;*/
-    /*border-radius: 10px;*/
+    border-style: solid;
+    border-color: #eee;
+    border-radius: 10px;
     margin: 10px auto;
     padding: 40px;
-    /* Removing these to create a uniform look */
-    /*background-color: #ffffff;*/
-    /*border-radius: 8px;*/
-    /*box-shadow: 0 2px 5px rgba(0,0,0,0.05);*/
-}
-
-.name {
-  margin: 0;
-  font-family: var(--font);
-  font-size: 30px;
-}
-
-
-span.highlight {
-  background-color: #ffffd0;
-}
-
-.colored-box {
-    color: black;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
 }
 
 .icon {
-  height: 25px;
+  height: 20px;
 }
 
 ul.spaced-list li {
