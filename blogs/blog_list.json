@@ -1,8 +1,8 @@
 [
   {
-    "title": "xxx",
-    "date": "2025-06-27",
-    "url": "./test/index.html",
-    "summary": "xxx"
+    "title": "Notes for LeetCode Hot100",
+    "date": "2025-06-29",
+    "url": "./leetcode-hot100/index.html",
+    "summary": "A collection of notes and solutions for the LeetCode Hot100 problems, designed to help you prepare for coding interviews and improve your algorithm skills."
   }
 ] 
