@@ -91,7 +91,7 @@
 a:not(#blog-post-content a):not(#table-of-contents a),
 a:link:not(#blog-post-content a):not(#table-of-contents a),
 a:visited:not(#blog-post-content a):not(#table-of-contents a) {
-  color: #4B9CE3;
+  color: #0984e3;
   text-decoration: none;
 }
 
