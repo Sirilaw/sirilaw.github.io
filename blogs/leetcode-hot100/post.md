@@ -94,8 +94,11 @@ if (ageMap.find("Alice") != ageMap.end()) {
 </p>
 
 [CoolApply公众号对于双指针的解决攻略](https://mp.weixin.qq.com/s/adHMfC0Fu1BC7Puqj2exzQ)，其中含有接雨水的思路解析。核心破题点：**正难则反**。如果直接考虑每个坑能装多少水，显然很麻烦，因为要全面考虑坑的形状，这太离谱了；于是我们换个角度，考虑每个柱子能贡献多少水量。
+观察性质，可以发现，每个柱子能够贡献的水量按照如下方式得到：$$w[i] = \text{min}(lmax, rmax) - height[i]$$
 
-观察性质，可以发现，每个柱子能够贡献的水量$w[i] = \text{min}(lmax, rmax) - height[i]$。则我们可以先用动态规划的思想，求出每个位置的`lmax`和`rmax`，然后累加。
+#### 法1：动态规划
+
+我们可以先用动态规划的思想，求出每个位置的`lmax`和`rmax`，然后累加每个位置的柱子贡献的水量。
 
 ```cpp
 int trap(vector<int>& height) {
@@ -121,3 +124,68 @@ int trap(vector<int>& height) {
     return res;
 }     
 ``` 
+
+#### 法2：双指针
+
+由于动态规划会带来比较大的空间占用，所以可否采用**边走边算**的思路来完成呢？当然可以，也就是使用双指针，边算$lmax$和$rmax$，边得到蓄水量。考虑其正确性：首先，由于我们并不关心$lmax$和$rmax$的值，只关注小的那个是多少，所以，考虑$\text{lmax}[l] < \text{rmax}[r]$下的两种情况：
+
+- 在l和r中间存在一个位置mid，使得$height[mid]$小于$rmax[r]$，此时，由于找的是位置i往右的max值，所以一定大于等于$rmax[r]$
+- 在l和r中间存在一个位置mid，使得$height[mid]$大于等于$rmax[r]$，此时，$lmax[l]$依然是较小的那个。
+
+```cpp
+int trap(vector<int>& height) {
+    int l = 0, r = height.size() - 1;
+    int lmax = height[l], rmax = height[r];
+    int res = 0;
+
+    while (l < r) {
+        if (lmax < rmax) {
+            res += lmax - height[l];
+            l++;
+            lmax = max(lmax, height[l]);
+        }
+        else {
+            res += rmax - height[r];
+            r--;
+            rmax = max(rmax, height[r]);
+        }
+    }
+
+    return res;
+}
+```
+
+同时注意到，双指针其实更快（完全的$O(n)实现），而动态规划要$O(3n)$，是同数量级下的不同系数之间的运行效率区别。
+
+#### 法3：栈
+<p align="center">
+    <img src="rainwatertrap-2.png" width="50%" alt="example figure">
+</p>
+
+emmm...，个人认为栈的思路不如前两种好理解。如上图所示，把竖直方向上的思考角度变为横向的思考角度。注意到，每一块水坑的构成其实从左往右看都可以视为一个**单调栈**，一个柱子右侧容纳的水量取决于何时遇到比它高的柱子，故可以编写如下程序进行解决：
+
+```cpp
+int trap(vector<int>& height) {
+    int res = 0;
+    vector<int> stack = {};
+
+    for (int i = 0; i < height.size(); i++) {
+        while (stack.size() != 0 && height[stack.back()] < height[i]) {
+            int low = height[stack.back()];
+            stack.pop_back();
+            if (stack.size() == 0) break;
+            int high = min(height[i], height[stack.back()]);
+            res += (high - low) * (i - stack.back() - 1);
+        }
+        stack.push_back(i);
+    }
+    
+    return res;
+}
+```
+
+## 动态规划
+
+### 爬楼梯【70】
+
+很简单。爬到第$n$阶的方法数等于爬到第$n-1$阶的方法数加上爬到第$n-2$阶的方法数。
