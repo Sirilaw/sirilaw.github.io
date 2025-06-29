@@ -23,7 +23,12 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <!-- Include highlight.js for code syntax highlighting -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+  <!-- KaTeX JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+  <!-- KaTeX Auto-render Extension -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
   <title>Notes for LeetCode Hot100 - Siyuan Liu</title>
   <link rel="shortcut icon" href="../../images/icon/favor.jpg" type="image/x-icon">
   <link rel="icon" href="../../images/icon/favor.jpg" type="image/x-icon">
@@ -80,6 +85,15 @@
           hljs.highlightBlock(block);
         });
         
+            // Render math expressions with KaTeX
+        renderMathInElement(document.getElementById('blog-post-content'), {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: true}
+          ],
+          throwOnError: false
+        });
+
         // Generate table of contents
         generateTableOfContents();
       } catch (error) {
@@ -131,4 +145,4 @@
   </footer> -->
 </div>
 </body>
-</html> 
+</html>
