@@ -177,3 +177,42 @@ a:visited:not(#blog-post-content a):not(#table-of-contents a) {
   padding-left: 45px;
   font-size: 0.9em;
 } 
+
+/* 定理和证明的样式 */
+.theorem {
+  background-color: #f2f7fd;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.theorem-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #2980b9;
+  display: block;
+}
+
+.theorem-content {
+  font-style: italic;
+  color: #333;
+}
+
+/* 用于证明的样式，可选 */
+.proof {
+  background-color: #f9f9f9;
+  border-left: 4px solid #95a5a6;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px 20px;
+}
+
+.proof-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+  display: block;
+}

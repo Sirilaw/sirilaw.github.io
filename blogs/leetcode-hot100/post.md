@@ -11,6 +11,15 @@
 - 指定大小和初始值：`vector<int> v3(5, 10)`创建大小为5的向量，每个元素默认值为10
 - 使用列表初始化：`vector<int> v4 = {1, 2, 3, 4, 5}`
 
+### 字符串
+
+如何判断两个字符串是否相等：
+
+- string A 和 string B是否相等：直接使用`==`运算符比较：`A==B`
+- string A的某部分和string B的某部分是否相等：
+    - 使用`substr`来判断：A.substr(0, 5)从位置0开始的5个字符
+    - 使用`compare`来判断：A.compare(0, 5, B, 3, 5)   
+
 ### unordered_map
 
 引入头文件：

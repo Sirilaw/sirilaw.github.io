@@ -84,6 +84,8 @@
         document.querySelectorAll('pre code').forEach((block) => {
           hljs.highlightBlock(block);
         });
+
+        formatTheorems();
         
             // Render math expressions with KaTeX
         renderMathInElement(document.getElementById('blog-post-content'), {
@@ -100,6 +102,47 @@
         console.error('Error loading blog post:', error);
         document.getElementById('blog-post-content').innerHTML = '<p>Error loading blog post.</p>';
       }
+    }
+
+    // 添加格式化定理的函数
+    function formatTheorems() {
+      // 查找所有以 [定理x:] 或 **[定理x:]** 开头的段落
+      const content = document.getElementById('blog-post-content');
+      const paragraphs = content.querySelectorAll('p');
+      
+      paragraphs.forEach(p => {
+        const text = p.innerHTML;
+        // 匹配如 [定理1：四平方和定理] 或 **[定理1：四平方和定理]** 的格式
+        const theoremMatch = text.match(/^\**\[定理(\d+)[:：](.*?)\]\**\s*(.*)/);
+        
+        if (theoremMatch) {
+          // 提取定理编号、标题和内容
+          const theoremNumber = theoremMatch[1];
+          const theoremTitle = theoremMatch[2].trim();
+          const theoremContent = theoremMatch[3];
+          
+          // 创建定理容器
+          const theoremDiv = document.createElement('div');
+          theoremDiv.className = 'theorem';
+          
+          // 创建定理标题
+          const titleSpan = document.createElement('span');
+          titleSpan.className = 'theorem-title';
+          titleSpan.textContent = `定理 ${theoremNumber}${theoremTitle ? '：' + theoremTitle : ''}`;
+          
+          // 创建定理内容
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'theorem-content';
+          contentDiv.innerHTML = theoremContent;
+          
+          // 组装定理
+          theoremDiv.appendChild(titleSpan);
+          theoremDiv.appendChild(contentDiv);
+          
+          // 替换原始段落
+          p.parentNode.replaceChild(theoremDiv, p);
+        }
+      });
     }
     
     // Function to generate table of contents from headings
