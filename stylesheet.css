@@ -2,14 +2,14 @@
   --h1-font-size: 2em;
   --h2-font-size: 1.4em;
   --h2-font-weight: normal;
-  --paper-font-size: 19px;
-  --main-font-size: 17px;
-  --font: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  --paper-font-size: 18px;
+  --main-font-size: 16px;
+  --font: 'Roboto', sans-serif;
   /* Fallback system fonts are already defined above */
 }
 
 a {
-  color: #0984e3;
+  color: #4491f5;
 }
 a:focus,
 a:hover {
@@ -19,7 +19,7 @@ a:hover {
 body {
   font-family: var(--font);
   font-size: var(--main-font-size);
-  color: black;
+  color: #2d2d2d;
   font-weight: normal;
   line-height: 1.4;
 }
@@ -37,8 +37,8 @@ li::before {
 
 img.me {
     margin-right: 25px;
-    border:2px solid #fff;
-    border-radius: 5px;
+    /* border:2px solid #fff; */
+    border-radius: 15px;
 }
 
 p {
@@ -48,7 +48,7 @@ p {
 h1 {
   font-weight: 500;
   /* color: #fb7882; */
-  color:black;
+  color: #b8587c;
   font-family: var(--font);
   font-size: var(--h1-font-size);
   margin-bottom: 10px;
@@ -57,7 +57,7 @@ h1 {
 h2 {
   margin-bottom: 10px;
   font-weight: 500;
-  color: black;
+  color: #b8587c;
   font-family: var(--font);
   font-size: var(--h2-font-size);
 }
@@ -85,7 +85,7 @@ papertitle {
 .main {
     width: 950px;
     margin: 10px auto;
-    padding: 40px;
+    padding: 25px;
 }
 
 .table-header {
