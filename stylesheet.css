@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 :root {
   --h1-font-size: 2em;
   --h2-font-size: 1.4em;
   --h2-font-weight: normal;
   --paper-font-size: 18px;
   --main-font-size: 16px;
-  --font: 'Roboto', sans-serif;
+  --font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   /* Fallback system fonts are already defined above */
 }
 
