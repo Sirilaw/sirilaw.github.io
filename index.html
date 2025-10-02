@@ -43,11 +43,33 @@
       <table><tbody>
         <tr>
           <td>
-            <ul class="spaced-list">
-              <li><b>[July, 2025]</b> I started to work as a student Research Assistant at <a href="https://www.cds.hku.hk/">HKU CDS</a>!</li>
-              <li><b>[May, 2025]</b> I am awarded <i>Outstanding Youth League Cadre Model of Nanjing University</i> (南京大学优秀共青团干部标兵). Thanks for teacher Qifang Li's guidance!</li>
-              <li><b>[April, 2025]</b> My personal homepage is launched! Here we go!</li>
-            </ul>
+        <ul class="spaced-list">
+          <li><b>[Sep, 2025]</b> I am awarded <em>Outstanding Student Leader (Model) of Nanjing University</em>.</li>
+          <li><b>[Sep, 2025]</b> I am awarded <em>National Scholarship</em> for the second time.</li>
+          <li><b>[Sep, 2025]</b> I am admitted as a Ph.D. student at Nanjing University.</li>
+          <li><b>[July, 2025]</b> I started to work as a student Research Assistant at HKU CDS.</li>
+          <li><b>[May, 2025]</b> I am awarded <i>Outstanding Youth League Cadre (Model) of Nanjing University</i> (南京大学优秀共青团干部标兵). Thanks for teacher Qifang Li's guidance!</li>
+          <li id="more-news" style="display: none;"><b>[April, 2025]</b> My personal homepage is launched! Here we go!</li>
+        </ul>
+        <p style="margin-left: 2em;"><a href="javascript:void(0);" id="show-more-btn" onclick="showMoreNews()" style="color: #888;">== Show More ==</a></p>
+        <script>
+          function showMoreNews() {
+        var moreNews = document.querySelectorAll('[id^="more-news"]');
+        var btn = document.getElementById('show-more-btn');
+        
+        if (btn.innerHTML === '== Show More ==') {
+          moreNews.forEach(function(item) {
+        item.style.display = 'list-item';
+          });
+          btn.innerHTML = '== Show Less ==';
+        } else {
+          moreNews.forEach(function(item) {
+        item.style.display = 'none';
+          });
+          btn.innerHTML = '== Show More ==';
+        }
+          }
+        </script>
           </td>
         </tr>
       </tbody></table>
@@ -56,21 +78,22 @@
       <table><tbody>
         <tr>
           <td>
-            <p>I'm still exploring the path of research and haven't published anything yet — but hopefully, I firmly believe that my first paper is just around the corner!</p>
+            <p>Still exploring the path of research and haven't published anything yet — but hopefully, I firmly believe that my first paper is just around the corner!</p>
           </td>
         </tr>
       </tbody></table>
+
 
       <h2>Awards and Honors</h2>
       <table><tbody>
         <tr>
           <td>
             <ul class="spaced-list">
-              <li>Guo Xie Birong Scholarship <em>(Top 60 undergraduates in Nanjing University, 10,000 RMB)</em>, 2024</li>
-              <li>Mobile Light Digital Intelligence Innovation Scholarship <em>(10,000 RMB)</em>, 2024</li>
-              <li>National Scholarship <em>(Top 0.2% national-wide, the highest honor in China university, 8,000 RMB)</em>, 2023</li>
-              <li>Outstanding Youth League Cadre Model of Nanjing University <i>(南京大学优秀共青团干部标兵)</i>, 2025</li>
-              <li>Outstanding Student Role Model of Nanjing University <em>(南京大学优秀学生标兵)</em>, 2024</li>
+              <li>National Scholarship <em>(Top 0.2% national-wide, the highest honor in China university)</em>, 2023, 2025</li>
+              <li>Guo Xie Birong Scholarship Special Award, 2024</li>
+              <li>Mobile Light Digital Intelligence Innovation Scholarship, 2024</li>
+              <li>Outstanding Student Leader (Model) of Nanjing University <i>(南京大学优秀学生干部，标兵)</i>, 2025</li>
+              <li>Outstanding Student (Model) of Nanjing University <em>(南京大学优秀学生，标兵)</em>, 2024</li>
             </ul>
           </td>
         </tr>
