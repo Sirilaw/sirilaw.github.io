@@ -67,24 +67,24 @@
   --h1-font-size: 2em;
   --h2-font-size: 1.4em;
   --h2-font-weight: normal;
-  --paper-font-size: 20px;
-  --main-font-size: 18px;
-  --font: 'Lato', Palatino, sans-serif;
+  --paper-font-size: 18px;
+  --main-font-size: 16px;
+  --font: Palatino, sans-serif;
   /* Fallback system fonts are already defined above */
 }
 
 a {
-  color: #3281e7;
+  color: #1e5cad;
 }
 a:focus,
 a:hover {
-  color: #6bd577;
+  color: #3da649;
 }
 
 body {
-  font-family: Lato, Palatino, sans-serif;
+  font-family: Palatino, sans-serif;
   font-size: var(--main-font-size);
-  color: #2d2d2d;
+  color: black;
   font-weight: normal;
   line-height: 1.4;
 }
@@ -111,17 +111,19 @@ p {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: normal;
   /* color: #fb7882; */
   color: #b8587c;
   /* font-family: var(--font); */
   font-size: var(--h1-font-size);
   margin-bottom: 10px;
+  margin-top: -10px;
 }
 
 h2 {
+  margin-top: 15px;
   margin-bottom: 10px;
-  font-weight: 500;
+  font-weight: normal;
   color: #b8587c;
   /* font-family: var(--font); */
   font-size: var(--h2-font-size);
@@ -148,9 +150,9 @@ papertitle {
 }
 
 .main {
-    width: 900px;
-    margin: 10px auto;
-    padding: 25px;
+  width: 850px;
+  margin: 10px auto;
+  padding: 25px;
 }
 
 .table-header {
@@ -158,10 +160,11 @@ papertitle {
 }
 
 .icon {
-  height: 25px;
+  height: 24px;
 }
 
 ul.spaced-list li {
-  line-height: 1.4;
+  margin-left: -5px;
+  line-height: 1.5;
   margin-bottom: 5px;
 }
