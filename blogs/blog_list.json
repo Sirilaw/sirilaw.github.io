@@ -4,5 +4,11 @@
     "date": "2025-06-29",
     "url": "./leetcode-hot100/index.html",
     "summary": "A collection of notes and solutions for the LeetCode Hot100 problems, designed to help you prepare for coding interviews and improve your algorithm skills."
+  },
+  {
+    "title": "Recording of Growing Up",
+    "date": "2026-03-10",
+    "url": "./growth/index.html",
+    "summary": "A personal reflection on the journey of growing up, sharing insights, challenges, and lessons learned along the way."
   }
 ] 
