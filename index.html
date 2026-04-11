@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+    <meta name="viewport" content="width=1024">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <link rel="icon" href="images/icon/favor.jpg" type="image/x-icon">
+    <title>Siyuan Liu</title>
+  </head>
+
+  <body>
+  <div class="main">
+        <h1 class="name">Siyuan Liu (刘思远)</h1>
+        <!-- <p><a href="index.html">Home</a> | <a href="blogs/index.html">Blog</a></p> -->
+
+        <table class="table-header"><tbody>
+          <tr>
+            <td>
+              <img class="me" style="height: 180px" alt="profile photo" src="images/me_life.jpg" class="hoverZoomLink">
+            </td>
+            <td vertical-align="center">
+              <p>
+          I am a final-year undergraduate and an incoming Ph.D. student at <a href="https://cs.nju.edu.cn">School of Computer Science</a> in <a href="https://www.nju.edu.cn">Nanjing University</a>, fortunately advised by <a href="https://cs.nju.edu.cn/shiyh/">Prof. Yinghuan Shi</a>. My current research interests primarily lie in LLM and multi-modal learning.
+              </p>
+              <p>
+          <a href="files/wechat_qr.jpg"><img src="images/icon/wechat.png" alt="wechat" class="icon"></a>
+          <a href="https://github.com/Sirilaw"><img src="images/icon/github.png" alt="github" class="icon"></a>
+          <a href="files/CV.pdf"><img src="images/icon/CV.png" alt="cv" class="icon"></a>
+              </p>
+              <p>
+          <b>Email:</b> liusiyuan [at] smail.nju.edu.cn 
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+
+      <hr class="my-4">
+
+      <h2>News</h2>
+      <table><tbody>
+        <tr>
+          <td>
+        <ul class="spaced-list">
+		      <li><b>[Jan, 2026]</b> Delighted to receive the <em>Tang Zhongying Moral Education Scholarship</em> in my final year at university.
+          <li><b>[Sep, 2025]</b> Glad to be awarded <em>Outstanding Student Leader (Model) of Nanjing University</em>.</li>
+          <li><b>[Sep, 2025]</b> Glad to receive <em>National Scholarship</em> for the second time.</li>
+          <li><b>[Sep, 2025]</b> I am admitted as a Ph.D. student at Nanjing University.</li>
+          <li  id="more-news" style="display: none;"><b>[July, 2025]</b> Start to work as a student Research Assistant at HKU CDS.</li>
+          <li id="more-news" style="display: none;"><b>[May, 2025]</b> I am awarded <i>Outstanding Youth League Cadre (Model) of Nanjing University</i> (南京大学优秀共青团干部标兵). Thanks for teacher Qifang Li's guidance!</li>
+          <li id="more-news" style="display: none;"><b>[April, 2025]</b> My personal homepage is launched! Here we go!</li>
+        </ul>
+        <p style="margin-left: 2em;"><a href="javascript:void(0);" id="show-more-btn" onclick="showMoreNews()" style="color: #888;">== Show More ==</a></p>
+        <script>
+          function showMoreNews() {
+        var moreNews = document.querySelectorAll('[id^="more-news"]');
+        var btn = document.getElementById('show-more-btn');
+        
+        if (btn.innerHTML === '== Show More ==') {
+          moreNews.forEach(function(item) {
+        item.style.display = 'list-item';
+          });
+          btn.innerHTML = '== Show Less ==';
+        } else {
+          moreNews.forEach(function(item) {
+        item.style.display = 'none';
+          });
+          btn.innerHTML = '== Show More ==';
+        }
+          }
+        </script>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <h2>Publications</h2>
+      <table><tbody>
+        <tr>
+          <td>
+            <p>Still exploring the path of research and haven't published anything yet — but hopefully, I firmly believe that my first work is just around the corner.</p>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <h2>Experience</h2>
+      <table><tbody>
+        <tr>
+          <td style="padding:22px;width:30%;vertical-align:center;text-align:center">
+          <img style="width:45%;max-width:70%" alt="HKU logo" src="images/institution/hku.png" class="hoverZoomLink">
+          </td>
+          <td style="padding:20px;width:70%;vertical-align:center;line-height:1.6em">
+              <a href="https://visailab.github.io/">
+                <papertitle>The University of Hong Kong, Visual AI Lab</papertitle>
+              </a>
+              <br>
+              Student Research Assistant, 2025.7 - 2025.11
+              <br>
+              Advised by <a href="https://www.kaihan.org/">Prof. Kai Han</a>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Education</h2>
+      <table><tbody>
+        <tr>
+          <td style="padding:22px;width:30%;vertical-align:center;text-align:center">
+          <img style="width:40%;max-width:70%" alt="NJU logo" src="images/institution/nju.jpg" class="hoverZoomLink">
+          </td>
+          <td style="padding:20px;width:70%;vertical-align:center;line-height:1.6em">
+              <a href="https://www.nju.edu.cn">
+                <papertitle>Nanjing University</papertitle>
+              </a>
+              <br>
+              B.Sc. in Computer Science and Technology
+              <br>
+              2022.9 - 2026.6 (expected)
+              <!-- <br>
+              Advisor: <a href="https://cs.nju.edu.cn/shiyh/index.htm">Prof. Yinghuan Shi</a> -->
+          </td>
+        </tr>
+      </table>
+      <!-- <table><tbody>
+        <tr>
+          <td style="padding:20px;width:30%;vertical-align:center;text-align:center">
+          <img style="width:50%;max-width:70%" alt="zhugao logo" src="images/institution/zhugao.jpg" class="hoverZoomLink">
+          </td>
+          <td style="padding:20px;width:70%;vertical-align:center;line-height:1.6em">
+              <a href="http://www.zmdgjzx.com/">
+                <papertitle>Henan Zhumadian Senior High School</papertitle>
+              </a>
+              <br>
+              2019.09 - 2022.06
+          </td>
+        </tr>
+      </table> -->
+
+      <h2>Awards and Honors</h2>
+      <table><tbody>
+        <tr>
+          <td>
+            <ul class="spaced-list">
+                  <li style="background-color: #fff3cd; list-style-type: none;">National Scholarship <em>(Top 0.2% national-wide, the highest honor in China university)</em>, 2023, 2025</li>
+              <li>Guo Xie Birong Scholarship Special Award, 2024</li>
+              <li>Mobile Light Digital Intelligence Innovation Scholarship, 2024</li>
+              <li>Outstanding Student Leader (Model) of Nanjing University <i>(南京大学优秀学生干部，标兵)</i>, 2025</li>
+              <li>Outstanding Student (Model) of Nanjing University <em>(南京大学优秀学生，标兵)</em>, 2024</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <h2>Services</h2>
+      <table><tbody>
+        <tr>
+          <td>
+            <ul class="spaced-list">
+              <li>Teaching Assistant of <a href="https://discrete-mathematics-syh.github.io/2025/">Discrete Mathematics</a>, Spring 2025, Spring 2026</li>
+              <li>Executive Chair at the Student Union, School of Computer Science, 2024.08-2025.06</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody></table>
+
+      <h2>Friends</h2>
+      <table><tbody>
+        <tr>
+          <td>
+            <a href="https://huatiancen.github.io/">Tiancen Hua</a>
+          </td>
+        </tr>
+      </tbody></table>
+      <!-- <div style="text-align: center; margin: 20px 0; ">
+        <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=130909&w=300&t=tt&d=_MiAeZbCK2-NSDcZOs03Xfzi-tilpV4gvw2Tb_J1FNE&co=ffffff&ct=808080&cmo=d71616&cmn=1e761e'></script>
+      </div> -->
+  </div>
+
+  </body>
+</html>
