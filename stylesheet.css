@@ -82,7 +82,7 @@ a:hover {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Lato, Palatino, sans-serif;
   font-size: var(--main-font-size);
   color: black;
   font-weight: normal;
