@@ -67,8 +67,8 @@
   --h1-font-size: 2em;
   --h2-font-size: 1.4em;
   --h2-font-weight: normal;
-  --paper-font-size: 16px;
-  --main-font-size: 16px;
+  --paper-font-size: 14px;
+  --main-font-size: 14px;
   --font: Palatino, sans-serif;
   /* Fallback system fonts are already defined above */
 }
@@ -90,24 +90,24 @@ body {
 }
 
 ul {
-  padding-left: 12px; /* 控制圆点的缩进 */
+  padding-left: 20px; /* 控制圆点的缩进 */
   list-style: none; /* 去掉默认的列表样式 */
   list-style-position:inside; /* 可选 */
 }
 
 li::before {
-  content: "•"; /* 使用圆点符号 */
+  /* content: ; 使用圆点符号 */
   padding-right: 6px; /* 控制圆点与文本之间的间距 */
 }
 
 img.me {
-    margin-right: 25px;
+    margin-right: 20px;
     /* border:2px solid #fff; */
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 p {
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1 {
@@ -150,7 +150,7 @@ papertitle {
 }
 
 .main {
-  width: 850px;
+  width: 800px;
   margin: auto;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -162,11 +162,11 @@ papertitle {
 }
 
 .icon {
-  height: 25px;
+  height: 20px;
 }
 
 ul.spaced-list li {
   margin-left: -5px;
-  line-height: 1.5;
+  line-height: 1.4;
   margin-bottom: 5px;
 }
